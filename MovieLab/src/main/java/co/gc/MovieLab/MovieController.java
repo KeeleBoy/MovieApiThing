@@ -25,7 +25,7 @@ public class MovieController {
 		return movieDao.findAll();
 	}
 
-	@GetMapping("/genre/{genre}")
+	@GetMapping("/movies/{genre}")
 	public List<Movie> listCategories(@PathVariable(value = "genre", required = false) String genre) {
 		return movieDao.findByGenreContainingIgnoreCaseOrderByName(genre);
 	}
